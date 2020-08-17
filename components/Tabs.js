@@ -15,22 +15,22 @@ const topics = document.querySelector('.topics');
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 
 .then((res) => {
-    const trendingTopics = res.data.topics
-    console.log(res)
+    const trendingTopics = res.data.topics;
+    console.log(res);
     trendingTopics.forEach(element => {
-        topics.appendChild(makeTab(element))
-        console.log(element)
+        topics.appendChild(makeTab(element));
+        console.log(element);
     });
     
 })
 .catch((err) => {
-    console.log('error!', err)
-})
+    console.log('error!', err);
+});
 
 function makeTab(topic){
-    const tabs = document.createElement('div')
-    tabs.classList.add('tab')
-    tabs.textContent = topic
-    return tabs
+    const tabs = document.createElement('div');
+    tabs.classList.add('tab');
+    tabs.textContent = topic;
+    return tabs;
 }
 makeTab();
