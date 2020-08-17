@@ -23,15 +23,15 @@ function header() {
     headerDiv.classList.add('header');
     span1.classList.add('span1');
     span2.classList.add('span2')
-    span1.textContent = 'March 28, 2020';
-    h1.textContent = 'Lambda Times';
-    span2.textContent = '98°';
+    span1.textContent = '\xa0\xa0\xa0' + 'March 28, 2020';
+    h1.textContent = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'Lambda Times' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0';
+    span2.textContent = '98°' + '\xa0\xa0\xa0';
 
     headerContainer.appendChild(headerDiv);
     headerDiv.appendChild(span1);
     headerDiv.appendChild(h1);
     headerDiv.appendChild(span2);
-    
+
     return headerDiv
 }
 header();
