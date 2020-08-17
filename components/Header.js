@@ -10,22 +10,29 @@
 //
 // Use your function to create a header
 // and append it to the DOM inside the div.header-container
-// console.log('Hello World!');
-console.log(document)
-function Header(obj) {
-    const header = document.createElement('div')
-    const h1 = document.createElement('h1')
-    const span1 = document.createElement('span')
-    const span2 = document.createElement('span')
-    h1.textContent = 'Lambda Times'
-    span1.textContent = 'March 28, 2020'
-    span2.textContent = '98°'
-    header.appendChild(span1);
-    header.appendChild(h1);
-    header.appendChild(span2);
-    document.getElementsByClassName('header-container')[0].appendChild(header)
-    // console.log(container)
-    // header.appendChild(span2);
-    // return header
-} 
-Header('header-container');   
+
+let headerContainer = document.querySelector('.header-container');
+
+function header() {
+
+    const headerDiv = document.createElement('div');
+    const span1 = document.createElement('span');
+    const h1 = document.createElement('h1');
+    const span2 = document.createElement('span');
+
+    headerDiv.classList.add('header');
+    span1.classList.add('span1');
+    span2.classList.add('span2')
+    span1.textContent = '\xa0\xa0\xa0' + 'March 28, 2020';
+    h1.textContent = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'Lambda Times' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0';
+    span2.textContent = '98°' + '\xa0\xa0\xa0';
+
+    headerContainer.appendChild(headerDiv);
+    headerDiv.appendChild(span1);
+    headerDiv.appendChild(h1);
+    headerDiv.appendChild(span2);
+
+    return headerDiv
+}
+header();
+
