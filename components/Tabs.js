@@ -5,7 +5,7 @@
 // Iterate over the topics creating a new tab for each topic, and appending it to the DOM
 // under the div.topics element.
 //
-//  Each tab should look like this:
+// Each tab should look like this:
 //    <div class="tab">topic here</div>
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
